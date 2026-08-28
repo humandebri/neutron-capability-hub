@@ -1,0 +1,21 @@
+{
+  "format": 2,
+  "app": "cycles_checkout",
+  "memory": {
+    "cycles_checkout": {
+      "schemas": {
+        "1": {
+          "hash": "63c219d2493bfbd3bfc27daec5ffe4ca76fafeeb3475063f6ccd88fa11217623",
+          "entry": "63c219d2493bfbd3bfc27daec5ffe4ca76fafeeb3475063f6ccd88fa11217623"
+        },
+        "2": {
+          "hash": "486a9cad4c13912a63c3f0d338965798bc396ae03ec0d6cefa1f9379938937b9",
+          "entry": "486a9cad4c13912a63c3f0d338965798bc396ae03ec0d6cefa1f9379938937b9"
+        }
+      },
+      "migrations": {
+        "1->2": "1800be490be29f6f1b3e9bb54e02866d673d7f8f0a5c779ef5b11edcb9b52903"
+      }
+    }
+  }
+}

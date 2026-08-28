@@ -1,0 +1,171 @@
+{
+  "format": 3,
+  "id": "github_driver",
+  "name": "GitHub Driver",
+  "version": 100,
+  "update_source": "233tv-xiaaa-aaaay-aacta-cai",
+  "description": "A user-owned GitHub connection with durable, reconciled write jobs",
+  "src": "main.mo",
+  "background": {
+    "path": "service.html",
+    "description": "GitHub capability executor"
+  },
+  "capabilities": {
+    "preapproved_self_calls": {
+      "api": 1,
+      "methods": [
+        "github_connection_save",
+        "github_connection_status",
+        "github_connection_secret",
+        "github_connection_disconnect",
+        "github_policies_list",
+        "github_policy_authorize",
+        "github_policy_save",
+        "github_policy_remove",
+        "github_job_enqueue",
+        "github_jobs_list",
+        "github_job_load",
+        "github_job_claim",
+        "github_job_mark_send_started",
+        "github_job_complete",
+        "github_jobs_delete_terminal"
+      ]
+    }
+  },
+  "tiles": [
+    {
+      "id": "github",
+      "title": "GitHub Driver",
+      "path": "index.html",
+      "icon": "static/icon.svg",
+      "description": "Connect once; lend narrow GitHub operations"
+    }
+  ],
+  "func": {
+    "github_connection_save": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_connection_status": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_connection_secret": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_connection_disconnect": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_policies_list": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_policy_authorize": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_policy_save": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_policy_remove": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_job_enqueue": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_jobs_list": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_job_load": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_job_claim": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_job_mark_send_started": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_job_complete": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "github_jobs_delete_terminal": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    }
+  },
+  "memory": {
+    "github_driver": {
+      "version": 2,
+      "schemas": {
+        "1": {
+          "src": "memory/github_driver/v1.mo"
+        },
+        "2": {
+          "src": "memory/github_driver/v2.mo"
+        }
+      },
+      "migrations": [
+        {
+          "from": 1,
+          "to": 2,
+          "src": "memory/github_driver/v1_to_v2.mo"
+        }
+      ]
+    }
+  }
+}

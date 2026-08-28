@@ -1,0 +1,21 @@
+{
+  "format": 2,
+  "app": "github_driver",
+  "memory": {
+    "github_driver": {
+      "schemas": {
+        "1": {
+          "hash": "abd1746fc450af3aff1425cfce43b03d9814b03d4fa33c60aab8c255c1391cf8",
+          "entry": "845f48334db6b23ebfed0f2d76818b59d3cb3436783e37bc2fa7c6867c6bbf8e"
+        },
+        "2": {
+          "hash": "cce188b7229cd347dbcd0477da0b67cd75e93512346a419bafb030ebda04b362",
+          "entry": "bbc2fe1848de567515ce84f3465eb1abb800cf8d5b6b215b71236897e1b807d1"
+        }
+      },
+      "migrations": {
+        "1->2": "5e0dd5dc16a99c5377635c3974feab53ceaadd41dd53322f9e2a9a56a734059c"
+      }
+    }
+  }
+}

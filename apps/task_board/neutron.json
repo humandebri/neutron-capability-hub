@@ -1,0 +1,62 @@
+{
+  "format": 3,
+  "id": "task_board",
+  "name": "Tasks",
+  "version": 100,
+  "update_source": "233tv-xiaaa-aaaay-aacta-cai",
+  "description": "Durable, revisioned work items for Neutron apps and agents",
+  "src": "main.mo",
+  "background": {
+    "path": "service.html",
+    "description": "Tasks tool host"
+  },
+  "capabilities": {
+    "preapproved_self_calls": {
+      "api": 1,
+      "methods": [
+        "tasks_list",
+        "tasks_create",
+        "tasks_complete",
+        "tasks_delete_completed"
+      ]
+    }
+  },
+  "tiles": [
+    {
+      "id": "tasks",
+      "title": "Tasks",
+      "path": "index.html",
+      "icon": "static/icon.svg",
+      "description": "Turn durable capabilities into finished work"
+    }
+  ],
+  "func": {
+    "tasks_list": {
+      "type": "query",
+      "async": false
+    },
+    "tasks_create": {
+      "type": "update",
+      "async": false
+    },
+    "tasks_complete": {
+      "type": "update",
+      "async": false
+    },
+    "tasks_delete_completed": {
+      "type": "update",
+      "async": false
+    }
+  },
+  "memory": {
+    "tasks": {
+      "version": 1,
+      "schemas": {
+        "1": {
+          "src": "memory/tasks/v1.mo"
+        }
+      },
+      "migrations": []
+    }
+  }
+}

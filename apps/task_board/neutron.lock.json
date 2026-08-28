@@ -1,0 +1,15 @@
+{
+  "format": 2,
+  "app": "task_board",
+  "memory": {
+    "tasks": {
+      "schemas": {
+        "1": {
+          "hash": "56a9dc3389d1a38c3f9c9b00054920ebd82a4443c9b4564f42c5d53f71a4f933",
+          "entry": "36e9026495f9d88f97cc92184024a7197872440af388756502c7af2f1def4ef3"
+        }
+      },
+      "migrations": {}
+    }
+  }
+}

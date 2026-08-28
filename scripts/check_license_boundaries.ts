@@ -36,7 +36,13 @@ const legacyNsalAppWorkspaces = [
 ];
 
 const nsalAppWorkspaces: string[] = [];
-const nsalUseAppWorkspaces: string[] = [];
+const nsalUseAppWorkspaces = [
+  "apps/capability_hub",
+  "apps/cycles_checkout",
+  "apps/github_driver",
+  "apps/task_board",
+  "apps/x402_guard",
+];
 
 const apacheAppWorkspaces = ["apps/gemma"];
 const kernelWorkspaces = ["apps/kernel"];

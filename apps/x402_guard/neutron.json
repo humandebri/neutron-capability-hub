@@ -1,0 +1,58 @@
+{
+  "format": 3,
+  "id": "x402_guard",
+  "name": "x402 Guard",
+  "version": 100,
+  "update_source": "233tv-xiaaa-aaaay-aacta-cai",
+  "description": "Deny-by-default x402 policy evaluation without a wallet or funds",
+  "src": "main.mo",
+  "background": {
+    "path": "service.html",
+    "description": "x402 policy tool host"
+  },
+  "capabilities": {
+    "preapproved_self_calls": {
+      "api": 1,
+      "methods": [
+        "x402_policy_status",
+        "x402_policy_save"
+      ]
+    }
+  },
+  "tiles": [
+    {
+      "id": "guard",
+      "title": "x402 Guard",
+      "path": "index.html",
+      "icon": "static/icon.svg",
+      "description": "Inspect payment requirements before any wallet exists"
+    }
+  ],
+  "func": {
+    "x402_policy_status": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "x402_policy_save": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    }
+  },
+  "memory": {
+    "x402_guard": {
+      "version": 1,
+      "schemas": {
+        "1": {
+          "src": "memory/x402_guard/v1.mo"
+        }
+      },
+      "migrations": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+import Tasks "../backend/main";
+import Memory "../backend/memory/tasks/v1";
+let app = Tasks.Init({ stable_memory = { tasks = Memory.init() } });
+let created = app.tasks_create("First task", "request-1", "manual", "", "", 0, "");
+assert created.ok;
+let duplicate = app.tasks_create("Different", "request-1", "manual", "", "", 0, "");
+assert duplicate.ok;
+assert (app.tasks_list().tasks.size() == 1);
+let completed = app.tasks_complete(1, 1);
+assert completed.ok;
+assert (not app.tasks_complete(1, 1).ok);
+assert (app.tasks_delete_completed([{ id = 1; expected_revision = 2 }]).deleted == 1);
+assert (app.tasks_list().tasks.size() == 0);
+let recreated = app.tasks_create("Recreated", "request-1", "manual", "", "", 0, "");
+assert recreated.ok;

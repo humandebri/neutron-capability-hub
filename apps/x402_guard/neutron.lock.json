@@ -1,0 +1,15 @@
+{
+  "format": 2,
+  "app": "x402_guard",
+  "memory": {
+    "x402_guard": {
+      "schemas": {
+        "1": {
+          "hash": "4badacc33686e2bfb04a2d8644340f0ebc033e9fe18eeb8d2c9aeffb515eb3ba",
+          "entry": "4badacc33686e2bfb04a2d8644340f0ebc033e9fe18eeb8d2c9aeffb515eb3ba"
+        }
+      },
+      "migrations": {}
+    }
+  }
+}

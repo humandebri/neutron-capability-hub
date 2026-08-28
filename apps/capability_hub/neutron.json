@@ -1,0 +1,30 @@
+{
+  "format": 3,
+  "id": "capability_hub",
+  "name": "Capability Hub",
+  "version": 100,
+  "update_source": "233tv-xiaaa-aaaay-aacta-cai",
+  "description": "A redacted switchboard for installed capabilities, live endpoints, Jobs and audit",
+  "src": "main.mo",
+  "tiles": [
+    {
+      "id": "hub",
+      "title": "Capability Hub",
+      "path": "index.html",
+      "icon": "static/icon.svg",
+      "description": "See what your Neutron can do and where each operation runs"
+    }
+  ],
+  "func": {},
+  "memory": {
+    "capability_hub": {
+      "version": 1,
+      "schemas": {
+        "1": {
+          "src": "memory/capability_hub/v1.mo"
+        }
+      },
+      "migrations": []
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format": 2,
+  "app": "capability_hub",
+  "memory": {
+    "capability_hub": {
+      "schemas": {
+        "1": {
+          "hash": "15abeb018bc185db35c211c13defc2bdd0e7652c4641b3b369b192c3f5651f77",
+          "entry": "15abeb018bc185db35c211c13defc2bdd0e7652c4641b3b369b192c3f5651f77"
+        }
+      },
+      "migrations": {}
+    }
+  }
+}

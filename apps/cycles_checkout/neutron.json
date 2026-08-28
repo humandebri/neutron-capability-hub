@@ -1,0 +1,115 @@
+{
+  "format": 3,
+  "id": "cycles_checkout",
+  "name": "Cycles Checkout",
+  "version": 100,
+  "update_source": "233tv-xiaaa-aaaay-aacta-cai",
+  "description": "Purchase cycles for this Neutron through a separately deployed Stripe service",
+  "src": "main.mo",
+  "backend": {
+    "capabilities": {
+      "backend_calls": {
+        "api": 1
+      }
+    }
+  },
+  "capabilities": {
+    "backend_calls": {
+      "api": 1,
+      "description": "Call one owner-approved Cycles Checkout Service",
+      "reservation_scopes": [
+        "exact"
+      ],
+      "max_concurrency": 1,
+      "max_cycles_per_call": 100000000,
+      "max_cycles_per_day": 1000000000
+    },
+    "preapproved_self_calls": {
+      "api": 1,
+      "methods": [
+        "cycles_checkout_config",
+        "cycles_checkout_config_save",
+        "cycles_price_menus",
+        "cycles_create_order",
+        "cycles_order_status",
+        "cycles_finalize_order"
+      ]
+    }
+  },
+  "background": {
+    "path": "service.html"
+  },
+  "tiles": [
+    {
+      "id": "cycles",
+      "title": "Cycles Checkout",
+      "path": "index.html",
+      "icon": "static/icon.svg",
+      "description": "Add execution fuel to this Neutron"
+    }
+  ],
+  "func": {
+    "cycles_checkout_config": {
+      "type": "query",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "cycles_checkout_config_save": {
+      "type": "update",
+      "async": false,
+      "arg": [
+        "caller"
+      ]
+    },
+    "cycles_price_menus": {
+      "type": "update",
+      "async": "async*",
+      "arg": [
+        "caller"
+      ]
+    },
+    "cycles_create_order": {
+      "type": "update",
+      "async": "async*",
+      "arg": [
+        "caller"
+      ]
+    },
+    "cycles_order_status": {
+      "type": "update",
+      "async": "async*",
+      "arg": [
+        "caller"
+      ]
+    },
+    "cycles_finalize_order": {
+      "type": "update",
+      "async": "async*",
+      "arg": [
+        "caller"
+      ]
+    }
+  },
+  "memory": {
+    "cycles_checkout": {
+      "version": 2,
+      "schemas": {
+        "1": {
+          "src": "memory/cycles_checkout/v1.mo"
+        },
+        "2": {
+          "src": "memory/cycles_checkout/v2.mo"
+        }
+      },
+      "migrations": [
+        {
+          "from": 1,
+          "to": 2,
+          "src": "memory/cycles_checkout/v1_to_v2.mo"
+        }
+      ]
+    }
+  }
+}
