@@ -1,0 +1,1 @@
+{"name":"trust-console-submission","private":true,"type":"module","version":"0.1.0","license":"Apache-2.0","scripts":{"build":"bun build.ts"},"dependencies":{"@types/react":"^19.2.17","@types/react-dom":"^19.2.3","esbuild":"^0.28.1","esbuild-sass-plugin":"^3.7.0","react":"^19.2.7","react-dom":"^19.2.7","neutron-design-system":"^1.1.0"}}
