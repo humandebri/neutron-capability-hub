@@ -4,7 +4,7 @@
 
 - Project: `Trust Console`
 - App id: `trust_console`
-- Project link: `https://github.com/humandebri/neutron-capability-hub`
+- Project link: `https://github.com/humandebri/neutron-capability-hub/tree/20d0ff688192e4c4c99c59aa06decbd16309792b/apps/trust_console`
 - Extra links: leave blank
 - Summary (455/600 characters):
 
